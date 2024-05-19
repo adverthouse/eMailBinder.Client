@@ -13,13 +13,12 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Adverthouse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("eMailBinder Client Library")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("7.0.13.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("7.0.13")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1+9bbbffae29a5f4425aa1dfe6ab51dd9435d9b721")]
 [assembly: System.Reflection.AssemblyProductAttribute("eMailBinder.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eMailBinder.Client")]
-[assembly: System.Reflection.AssemblyVersionAttribute("7.0.13.0")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/adverthouse/Adverthouse.Utilities/tree/master/Adverthouse.Util" +
-    "ity")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/adverthouse/eMailBinder.Client")]
 [assembly: System.Resources.NeutralResourcesLanguageAttribute("en")]
 
 // MSBuild WriteCodeFragment sınıfı tarafından oluşturuldu.

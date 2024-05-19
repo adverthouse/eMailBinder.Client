@@ -9,3 +9,4 @@
 /Users/yunus/Desktop/Works/adverthouse/eMailBinderClient/eMailBinder.Core/obj/Debug/net8.0/refint/eMailBinder.Core.dll
 /Users/yunus/Desktop/Works/adverthouse/eMailBinderClient/eMailBinder.Core/obj/Debug/net8.0/eMailBinder.Core.pdb
 /Users/yunus/Desktop/Works/adverthouse/eMailBinderClient/eMailBinder.Core/obj/Debug/net8.0/ref/eMailBinder.Core.dll
+/Users/yunus/Desktop/Works/adverthouse/eMailBinderClient/eMailBinder.Core/obj/Debug/net8.0/eMailBinder.Core.sourcelink.json

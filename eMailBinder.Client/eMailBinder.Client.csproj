@@ -12,8 +12,8 @@
     <PackageTags>C#, Utility</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageIcon> </PackageIcon>
-    <RepositoryUrl>https://github.com/adverthouse/Adverthouse.Utilities/tree/master/Adverthouse.Utility</RepositoryUrl>
-    <Version>7.0.13</Version>
+    <RepositoryUrl>https://github.com/adverthouse/eMailBinder.Client</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
