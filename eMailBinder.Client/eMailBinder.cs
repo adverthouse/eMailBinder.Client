@@ -18,7 +18,7 @@ public class eMailBinder :IeMailBinder
           
           /// trigger subscribe
 
-    //test
+    
           return result;
      }
 }
