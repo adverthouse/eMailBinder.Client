@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>eMailBinder.Client</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Adverthouse</Authors>
+    <Description>eMailBinder Client Library</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>C#, Utility</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageIcon> </PackageIcon>
+    <RepositoryUrl>https://github.com/adverthouse/Adverthouse.Utilities/tree/master/Adverthouse.Utility</RepositoryUrl>
+    <Version>7.0.13</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eMailBinder.Core\eMailBinder.Core.csproj" />
+  </ItemGroup>
+</Project>
