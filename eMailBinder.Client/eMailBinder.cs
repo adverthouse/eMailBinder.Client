@@ -1,4 +1,5 @@
-﻿using eMailBinder.Core.Common;
+﻿using eMailBinder.Client.Requests;
+using eMailBinder.Core.Common;
 
 namespace eMailBinder.Client;
 
@@ -13,7 +14,8 @@ public class eMailBinder :IeMailBinder
           _apiEndPoint = apiEndPoint;
      }
 
-     public StatusInfo<string> SubscribeToList(int listId){
+     public StatusInfo<string> SubscribeToList(SubscriptionRequest subscriptionRequest)
+     {
           var result = new StatusInfo<string>();
           
           /// trigger subscribe
