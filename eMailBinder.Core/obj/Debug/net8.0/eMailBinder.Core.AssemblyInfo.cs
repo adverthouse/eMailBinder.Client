@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eMailBinder.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bbbffae29a5f4425aa1dfe6ab51dd9435d9b721")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d45928615d1686793815bac30ef189dee63002e")]
 [assembly: System.Reflection.AssemblyProductAttribute("eMailBinder.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eMailBinder.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
