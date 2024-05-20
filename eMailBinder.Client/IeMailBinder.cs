@@ -8,6 +8,6 @@ using eMailBinder.Core.Common;
 namespace eMailBinder.Client;
 public interface IeMailBinder
 {
-    StatusInfo<string> SubscribeToList(SubscriptionRequest subscriptionRequest);
+    Task<StatusInfo<string>?>  SubscribeToList(SubscriptionRequest subscriptionRequest);
     
 }

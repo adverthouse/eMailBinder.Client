@@ -9,6 +9,6 @@ namespace eMailBinder.Client.Requests
     {
         public int ListId { get; set; }
         public string Name { get; set; } = String.Empty;
-        public string EMailAddress { get; set; } = String.Empty;         
+        public string EmailAddress { get; set; } = String.Empty;         
     }
 }
