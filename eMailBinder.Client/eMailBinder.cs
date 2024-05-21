@@ -21,7 +21,7 @@ public class eMailBinder :IeMailBinder
 
      public async Task<StatusInfo<string>?> SubscribeToList(SubscriptionRequest subscriptionRequest)
      {          
-          var result = await apiService.Post<StatusInfo<string>,SubscriptionRequest>($"api/subscribe",subscriptionRequest);
+          var result = await apiService.Post<StatusInfo<string>,SubscriptionRequest>($"api/subscription/add",subscriptionRequest);
           if (result.IsSuccess){
                return result.result;
           } else {
@@ -30,6 +30,32 @@ public class eMailBinder :IeMailBinder
     
           return result.result;
      }
+
+     public async Task<StatusInfo<string>?> Unsubscribe(UnsubscriptionRequest unsubscriptionRequest)
+     {          
+          var result = await apiService.Post<StatusInfo<string>,UnsubscriptionRequest>($"api/subscription/unsubscribe",unsubscriptionRequest);
+          if (result.IsSuccess){
+               return result.result;
+          } else {
+               result.result = new(StatusCode.Error,result.ErrorMessage ?? "Server error"); 
+          }     
+    
+          return result.result;
+     }
+
+      public async Task<StatusInfo<string>?> VerifyEmailAddress(VerifyEmailAddressRequest verifyEmailAddressRequest)
+     {          
+          var result = await apiService.Post<StatusInfo<string>,VerifyEmailAddressRequest>($"api/subscription/verify",verifyEmailAddressRequest);
+          if (result.IsSuccess){
+               return result.result;
+          } else {
+               result.result = new(StatusCode.Error,result.ErrorMessage ?? "Server error"); 
+          }     
+    
+          return result.result;
+     }
+
+
 
 /*
         public async Task<(bool IsSuccess, List<ApiVMCategory>? Categories, string? ErrorMessage)> GetAllActiveCategoriesAsync() => 
