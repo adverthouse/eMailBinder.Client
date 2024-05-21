@@ -15,5 +15,10 @@ public class StatusInfo<TData>
     {
         StatusCode = statusCode;
     }
+    public StatusInfo(StatusCode statusCode, string statusMessage)
+    {
+        StatusCode = statusCode;
+        StatusMessage = statusMessage;
+    }
 }
 

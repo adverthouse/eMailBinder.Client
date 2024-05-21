@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eMailBinder.Client", "eMailBinder.Client\eMailBinder.Client.csproj", "{74CCE464-8849-4A90-9D98-8A8AD4564914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eMailBinder.TestClient", "eMailBinder.TestClient\eMailBinder.TestClient.csproj", "{CA62525A-2F2C-4AB8-92F1-D78ACAEB7A90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{74CCE464-8849-4A90-9D98-8A8AD4564914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74CCE464-8849-4A90-9D98-8A8AD4564914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74CCE464-8849-4A90-9D98-8A8AD4564914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA62525A-2F2C-4AB8-92F1-D78ACAEB7A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA62525A-2F2C-4AB8-92F1-D78ACAEB7A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA62525A-2F2C-4AB8-92F1-D78ACAEB7A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA62525A-2F2C-4AB8-92F1-D78ACAEB7A90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

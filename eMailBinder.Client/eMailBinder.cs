@@ -24,6 +24,8 @@ public class eMailBinder :IeMailBinder
           var result = await apiService.Post<StatusInfo<string>,SubscriptionRequest>($"api/subscribe",subscriptionRequest);
           if (result.IsSuccess){
                return result.result;
+          } else {
+               result.result = new(StatusCode.Error,result.ErrorMessage ?? "Server error"); 
           }     
     
           return result.result;
