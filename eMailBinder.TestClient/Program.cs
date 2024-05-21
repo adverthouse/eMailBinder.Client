@@ -8,7 +8,7 @@ internal class Program
         eMailBinder.Client.eMailBinder binder = new("http://localhost:5100","test");
 
         var result = await binder.SubscribeToList(new eMailBinder.Client.Requests.SubscriptionRequest(){
-             EmailAddress = "yunusozturk@gmail.com",
+             EmailAddress = "testaddress@gmail.com",
              ListId = 1,
              Name = "Yunus"
         });
