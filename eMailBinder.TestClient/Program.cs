@@ -23,7 +23,7 @@ internal class Program
         Console.WriteLine($"VerifyEmailAddress : {result.Data}, {result.StatusMessage}"); 
 
         result = await binder.Unsubscribe(new eMailBinder.Client.Requests.UnsubscriptionRequest(){
-           EmailAddress = "yunusozturk7@gmail.com@gmail.com",
+           EmailAddress = "yunusozturk7@gmail.com",
            SubscriptionListId = 1
         });
 
