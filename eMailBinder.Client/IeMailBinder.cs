@@ -11,4 +11,5 @@ public interface IeMailBinder
     Task<StatusInfo<string>?>  SubscribeToList(SubscriptionRequest subscriptionRequest);
     Task<StatusInfo<string>?> Unsubscribe(UnsubscriptionRequest unsubscriptionRequest);
     Task<StatusInfo<string>?> VerifyEmailAddress(VerifyEmailAddressRequest verifyEmailAddressRequest);
+    Task<StatusInfo<string>?> CreateCampaign(CreateCampaignRequest createCampaignRequest);   
 }

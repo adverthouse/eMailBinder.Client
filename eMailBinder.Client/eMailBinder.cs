@@ -43,7 +43,7 @@ public class eMailBinder :IeMailBinder
           return result.result;
      }
 
-      public async Task<StatusInfo<string>?> VerifyEmailAddress(VerifyEmailAddressRequest verifyEmailAddressRequest)
+     public async Task<StatusInfo<string>?> VerifyEmailAddress(VerifyEmailAddressRequest verifyEmailAddressRequest)
      {          
           var result = await apiService.Post<StatusInfo<string>,VerifyEmailAddressRequest>($"api/subscription/verify",verifyEmailAddressRequest);
           if (result.IsSuccess){
@@ -54,6 +54,19 @@ public class eMailBinder :IeMailBinder
     
           return result.result;
      }
+
+     public async Task<StatusInfo<string>?> CreateCampaign(CreateCampaignRequest createCampaignRequest)
+     {          
+          var result = await apiService.Post<StatusInfo<string>,CreateCampaignRequest>($"api/campaign/create",createCampaignRequest);
+          if (result.IsSuccess){
+               return result.result;
+          } else {
+               result.result = new(StatusCode.Error,result.ErrorMessage ?? "Server error"); 
+          }     
+    
+          return result.result;
+     }
+
 
 
 
