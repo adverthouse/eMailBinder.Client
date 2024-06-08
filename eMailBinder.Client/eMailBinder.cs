@@ -15,8 +15,8 @@ public class eMailBinder :IeMailBinder
         _apiEndPoint = apiEndPoint;
 
         apiService = new APIService(new HttpClient(){
-           BaseAddress = new Uri(apiEndPoint)            
-        });
+           BaseAddress = new Uri(apiEndPoint),                       
+        },apiKey);
      }
 
      public async Task<StatusInfo<string>?> SubscribeToList(SubscriptionRequest subscriptionRequest)

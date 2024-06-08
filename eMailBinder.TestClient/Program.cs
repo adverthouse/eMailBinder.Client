@@ -5,7 +5,7 @@ internal class Program
     {
         Console.WriteLine("Hello, World!");
 
-        eMailBinder.Client.eMailBinder binder = new("http://localhost:5100","test");
+        eMailBinder.Client.eMailBinder binder = new("http://localhost:5100","696b334d986f4ef3b26c0d00906c6aa4");
 
         var result = await binder.SubscribeToList(new eMailBinder.Client.Requests.SubscriptionRequest(){
              EmailAddress = "yunusozturk7@gmail.com",

@@ -10,9 +10,10 @@ internal class APIService
 {
     private readonly HttpClient _httpClient;
 
-    public APIService(HttpClient httpClient)
+    public APIService(HttpClient httpClient,string apiKey)
     {
         _httpClient = httpClient;
+        _httpClient.DefaultRequestHeaders.Add("X-API-Key",apiKey);
     }
 
     public async Task<(bool IsSuccess, T? result, string? ErrorMessage)> Get<T>(string url)
