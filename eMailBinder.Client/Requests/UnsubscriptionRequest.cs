@@ -3,4 +3,5 @@ public class UnsubscriptionRequest
 {
     public int SubscriptionListId { get; set; } 
     public string EmailAddress { get; set; } = String.Empty;  
+    public int? UnsubscribedCampaignId { get; set; }
 }

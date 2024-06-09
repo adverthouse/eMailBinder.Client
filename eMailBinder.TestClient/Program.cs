@@ -24,7 +24,8 @@ internal class Program
 
         result = await binder.Unsubscribe(new eMailBinder.Client.Requests.UnsubscriptionRequest(){
            EmailAddress = "yunusozturk7@gmail.com",
-           SubscriptionListId = 1
+           SubscriptionListId = 1,
+           UnsubscribedCampaignId = 1
         });
 
         Console.WriteLine($"Unsubscribe : {result.StatusCode}, {result.StatusMessage}"); */
