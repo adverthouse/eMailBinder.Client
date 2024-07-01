@@ -5,10 +5,10 @@ internal class Program
     {
         Console.WriteLine("Hello, World!");
 
-        eMailBinder.Client.eMailBinder binder = new("http://localhost:5100","62a099bc55aa419989ecb9d8b04bcc82");
+        eMailBinder.Client.eMailBinder binder = new("https://emailbinder.yunus.us","45795dd61a204856b41fbb0ccde653db");
 
         var result = await binder.SubscribeToList(new eMailBinder.Client.Requests.SubscriptionRequest(){
-             EmailAddress = "yunusozturk7@gmail.com",
+             EmailAddress = "yunusozturk@gmail.com",
              SubscriptionListId = 1,
              Name = "Yunus",
              IPAddress = "192.168.1.1"
