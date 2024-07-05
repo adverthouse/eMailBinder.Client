@@ -9,7 +9,7 @@ internal class Program
 
         var result = await binder.SubscribeToList(new eMailBinder.Client.Requests.SubscriptionRequest(){
              EmailAddress = "yunusozturk@gmail.com",
-             SubscriptionListId = 1,
+             SubscriptionListSlug = "main_list",
              Name = "Yunus",
              IPAddress = "192.168.1.1"
         });
