@@ -66,4 +66,16 @@ public class eMailBinder :IeMailBinder
     
           return result.result;
      }
+
+     public async Task<StatusInfo<string>?> SendTransactionalEmail(TransactionalEmailRequest transactionalEmailRequest)
+     {          
+          var result = await apiService.Post<StatusInfo<string>,TransactionalEmailRequest>($"api/TransactionalEmail/send",transactionalEmailRequest);
+          if (result.IsSuccess){
+               return result.result;
+          } else {
+               result.result = new(StatusCode.Error,result.ErrorMessage ?? "Server error"); 
+          }     
+    
+          return result.result;
+     }
 }

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using eMailBinder.Client.Requests;
 using eMailBinder.Core.Common;
 
@@ -12,4 +8,5 @@ public interface IeMailBinder
     Task<StatusInfo<string>?> Unsubscribe(UnsubscriptionRequest unsubscriptionRequest);
     Task<StatusInfo<string>?> VerifyEmailAddress(VerifyEmailAddressRequest verifyEmailAddressRequest);
     Task<StatusInfo<string>?> CreateCampaign(CreateCampaignRequest createCampaignRequest);   
+    Task<StatusInfo<string>?> SendTransactionalEmail(TransactionalEmailRequest transactionalEmailRequest);
 }
