@@ -7,15 +7,15 @@ internal class Program
         Console.WriteLine("Hello, World!");
 
 
-/* 
+
         var result = await SendInvoice();
-        Console.WriteLine("Result is "+ result.StatusCode);
-        
- */
+        Console.WriteLine("Result is "+ result.StatusCode+","+result.StatusMessage);
+       
 
-    //  await Subscribe();      
-        await Verify("MkFBQUFCK0xDQUFBQUFBQUFBTUZ3ZDE2Z2lBQUFOQUg0c0tmVDBzdnVqQWI0WkFpSmFQZHRkU0JUSjJtZ2ozOXpobkl1Y0lnQVR5TEVBMUZwUzBUSkJxUDlaMEY1L1l3VGRqYVIzMkxMMEg5RzcybzkxcUtUdDFobThsclJXekQ4aWZFblVIbDBSVTVXTzFZODFXYVArUExrZnFnOEV5dE9WTzF1Ym84Vk00QVpyVEc0cXRaMHJuVmdxZGQ0dm9pUEJCNW9vS2pzVS9vSml1YkczbkFiYjlZenBLVWcvMmVQcERJWnQxMDhiUVJwMjVMZnZxSGNlVHowMWxVV01BOEZmdHZlTXlZU2htK2NlSno3N0xiL1FNczE1ZFUyQUFBQUE9PQ");
 
+   //   await Subscribe();      
+ //        var result =  await Verify("N0FBQUFCK0xDQUFBQUFBQUFBTUZ3Y3QyUkRBQUFOQVBta1hHbktoWWRFRWFyMVRGYTA1MVp4UlZFa1FZZlAzY080ZFJUUy8rNVR1eFBHYisxVSt3SS85SlpWTmtLT0lmU2xGZ1d5T25NV29HYTJGdzJlNmlMeHllZEhrZFh2Y01WekNMOFRIdEVqMkVaZ0IzU2MyVmpZcU1OWUV4MGxtbjFXSWd1VnR4TDFwNjEwUmhaSlU3T0lJR0k5aTIzSDc0N1FwUkYyREhGRUg2NVpXZmpCNHoram1WcUFEZm1Pb054dzUvRSt1T0s0TUczWXd6YldINXJjRE9yV3IwK1JyOWsrbEVwZ0EySFpaU1FqN0pmSlVUSWlDVFFsRWozZDZrZmxMeS9nS0dqdXNyN0FBQUFBPT0");
+//Console.WriteLine("Result is "+ result.StatusCode);
         
      //   await CreateCampaign();                   
 /*
@@ -31,25 +31,30 @@ internal class Program
     }
 
     private static eMailBinder.Client.eMailBinder _emailBinder{
-        get { return new eMailBinder.Client.eMailBinder("https://emailbinder.yunus.us","7284b804f6684164817f7ea6a02c7b4b");}
-    //    get { return new eMailBinder.Client.eMailBinder("https://localhost:5100","e7a5e92a04234744be4cda09603d0586");}
+      // get { return new eMailBinder.Client.eMailBinder("https://emailbinder.yunus.us","7284b804f6684164817f7ea6a02c7b4b");}
+        get { return new eMailBinder.Client.eMailBinder("https://localhost:5100","6fae697427f24c9d8a0d7292b97589d4");}
     }
 
-    private static async Task Verify(string code){
-         await _emailBinder.VerifyEmailAddress(new eMailBinder.Client.Requests.VerifyEmailAddressRequest(){
+    private static async  Task<StatusInfo<string>?> Verify(string code){
+         return await _emailBinder.VerifyEmailAddress(new eMailBinder.Client.Requests.VerifyEmailAddressRequest(){
              VerificationCode = code
          });
     } 
 
     private static async  Task<StatusInfo<string>?>  SendInvoice(){
 
-       return await _emailBinder.SendTransactionalEmail(new TransactionalEmailRequest(){
-            EmailTemplateSlug = "invoice",
-            ReceiverEmailAddress = "yunusozturk@gmail.com",
+       // string path = "/Users/yunus/Desktop/Works/adverthouse/eMailBinderClient/eMailBinder.TestClient/Invoice-1013412315005.pdf";
+
+        return await _emailBinder.SendTransactionalEmail(new TransactionalEmailRequest()
+        {
+            EmailTemplateSlug = "customer-invoice",
+            ReceiverEmailAddress = "YunusOzturk@gmail.com",
             MessageParameters = new Dictionary<string, string>(){
-                { "invoice_number" , "#125.100" },
-                { "total_amount", "1.250 USD"}
-            }
+                    { "invoice_number" , "#125.100" },
+                    { "total_amount", "1.250 USD"}
+                },
+        //    FileStream = File.ReadAllBytes(path),
+         //   FileName = "invoice.pdf"
         });
 
     }
@@ -75,7 +80,7 @@ internal class Program
         
 
         var result = await _emailBinder.SubscribeToList(new eMailBinder.Client.Requests.SubscriptionRequest(){
-             EmailAddress = "yunusozturk@msn.com",
+             EmailAddress = "YunusOzturk@gmail.com",
              SubscriptionListSlug = "main-list",
              Name = "Yunus",
              IPAddress = "192.168.1.1"
