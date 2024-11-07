@@ -12,7 +12,7 @@ internal class APIService
         _httpClient.DefaultRequestHeaders.Add("X-API-Key",apiKey);
     }
 
-    public async Task<(bool IsSuccess, T? result, string? ErrorMessage)> Get<T>(string url)
+    public async Task<(bool IsSuccess, T? result, string? ErrorMessage)> GetAsync<T>(string url)
     {
         try
         {                 
@@ -32,7 +32,7 @@ internal class APIService
         }
     }
 
-    public async Task<(bool IsSuccess, T1? result, string? ErrorMessage)> Post<T1,T2>(string url, T2 objectContent)
+    public async Task<(bool IsSuccess, T1? result, string? ErrorMessage)> PostAsync<T1,T2>(string url, T2 objectContent)
     {
         try
         { 
